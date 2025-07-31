@@ -84,12 +84,12 @@
   color: var(--backgroundColor);
   background-color: var(--primaryColor);
   border: 2px solid var(--primaryColor);
-  padding: 10px 20px;
+  padding: 8px 16px;
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -120,7 +120,7 @@
   color: var(--textColor);
   background-color: var(--backgroundColor);
   box-sizing: border-box;
-  padding: 32px;
+  padding: 16px;
   border-radius: 5px;
   pointer-events: auto;
   border: 0px;
@@ -172,7 +172,8 @@
   background-color: transparent;
   color: var(--primaryColor);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
+  margin: 0;
 }
 
 #silktide-banner .preferences span {
@@ -192,9 +193,9 @@
 }
 
 #silktide-banner p {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0px 0px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0px 0px 12px;
 }
 
 #silktide-banner a {
@@ -208,27 +209,27 @@
   color: var(--textColor);
 }
 
-#silktide-banner a.silktide-logo {
-  display: block;
-  fill: var(--primaryColor); /* passed down to svg > path */
-  margin-left: auto;
-  width: 24px;
-  height: 24px;
-}
-
-
 #silktide-banner .actions {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-direction: column;
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
-@media (min-width: 600px) {
-  #silktide-banner .actions {
-    flex-direction: row;
-    align-items: center;
-  }
+#silktide-banner .actions > .st-button {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Button row container for Accept/Reject buttons */
+#silktide-banner .actions .button-row {
+  display: flex;
+  gap: 12px;
+}
+
+#silktide-banner .actions .button-row .st-button {
+  flex: 1;
+  min-width: 0;
 }
 
 #silktide-banner .actions-row {
@@ -236,8 +237,21 @@
   gap: 16px;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+@media (min-width: 600px) {
+  #silktide-banner .actions {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #silktide-banner .actions-row {
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-top: 0;
+  }
 }
 
 /* --------------------------------
@@ -458,10 +472,6 @@
     flex-direction: row;
     align-items: center;
   }
-}
-
-#silktide-modal footer a {
-  margin-left: auto;
 }
 
 /* Cookie Icon */
