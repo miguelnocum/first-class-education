@@ -239,7 +239,7 @@
   Modal
 -------------------------------- */
 #silktide-modal {
-  display: none;
+  display: none !important;
   pointer-events: auto;
   width: 800px;
   max-width: 100%;
