@@ -861,4 +861,3 @@ class SilktideCookieBanner {
 		initCookieBanner();
 	}
 })();
-
