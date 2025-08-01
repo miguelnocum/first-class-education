@@ -127,7 +127,7 @@
   position: fixed;
   bottom: 16px;
   right: 16px;
-  width: 600px;
+  width: 350px;
   max-width: calc(100% - 32px);
   transform: translate(0, -20px);
   opacity: 0;
@@ -225,6 +225,7 @@
 #silktide-banner .actions .button-row {
   display: flex;
   gap: 12px;
+  justify-content: center;
 }
 
 #silktide-banner .actions .button-row .st-button {
@@ -243,14 +244,15 @@
 
 @media (min-width: 600px) {
   #silktide-banner .actions {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    gap: 12px;
   }
   
   #silktide-banner .actions-row {
-    justify-content: space-between;
-    flex-grow: 1;
+    justify-content: flex-start;
     margin-top: 0;
+    align-self: flex-start;
   }
 }
 
